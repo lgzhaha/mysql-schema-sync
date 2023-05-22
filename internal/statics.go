@@ -106,7 +106,6 @@ func (s *statics) toHTML() string {
 	for idx, tb := range s.tables {
 
 		code += "<tr>"
-		code += "<a name='detail_" + tb.table + "'></a>"
 		code += "<th rowspan=2>" + strconv.Itoa(idx+1) + "</th>\n"
 		code += "<td rowspan=2>" + tb.table + "<br/><br/>"
 		if s.Config.Sync {
@@ -119,6 +118,7 @@ func (s *statics) toHTML() string {
 			code += "未同步"
 		}
 		code += "</td>\n"
+		code += "<a name='detail_" + tb.table + "'></a>"
 		code += "<td valign=top><b>数据源 Schema:</b><br/>"
 		if len(tb.alter.SchemaDiff.Source.SchemaRaw) == 0 {
 			code += "<font color=red>在源数据源不存在，在目标数据库存在</font>"
