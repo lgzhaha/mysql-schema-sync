@@ -115,10 +115,10 @@ func (s *statics) toHTML() string {
 				code += "<font color=red>失败：" + tb.alterRet.Error() + "</font>"
 			}
 		} else {
+		    code += "<a name='detail_" + tb.table + "'></a>"
 			code += "未同步"
 		}
 		code += "</td>\n"
-		code += "<a name='detail_" + tb.table + "'></a>"
 		code += "<td valign=top><b>数据源 Schema:</b><br/>"
 		if len(tb.alter.SchemaDiff.Source.SchemaRaw) == 0 {
 			code += "<font color=red>在源数据源不存在，在目标数据库存在</font>"
