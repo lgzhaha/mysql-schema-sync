@@ -90,7 +90,7 @@ func (s *statics) toHTML() string {
 // 		code += "<a name='detail_" + tb.table + "'></a>"
 // 		code += html.EscapeString(tb.alter.String()) + "\n\n"
 // 	}
-	code += "</pre>\n\n"
+// 	code += "</pre>\n\n"
 
 	code += "<h3>详情</h3>\n"
 	code += `<table class='tb_1'>
