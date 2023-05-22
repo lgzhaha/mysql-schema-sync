@@ -86,10 +86,10 @@ func (s *statics) toHTML() string {
 		code += "</tr>\n"
 	}
 	code += "</tbody></table>\n<h3>SQLs</h3>\n<pre>"
-// 	for _, tb := range s.tables {
-// 		code += "<a name='detail_" + tb.table + "'></a>"
+	for _, tb := range s.tables {
+		code += "<a name='detail_" + tb.table + "'></a>"
 // 		code += html.EscapeString(tb.alter.String()) + "\n\n"
-// 	}
+	}
 	code += "</pre>\n\n"
 
 	code += "<h3>详情</h3>\n"
@@ -115,7 +115,6 @@ func (s *statics) toHTML() string {
 				code += "<font color=red>失败：" + tb.alterRet.Error() + "</font>"
 			}
 		} else {
-		    code += "<a name='detail_" + tb.table + "'></a>"
 			code += "未同步"
 		}
 		code += "</td>\n"
