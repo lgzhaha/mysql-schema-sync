@@ -1,4 +1,5 @@
 module github.com/lgzhaha/mysql-schema-sync
+replace github.com/hidu/mysql-schema-sync => github.com/lgzhaha/mysql-schema-sync
 
 go 1.19
 
