@@ -88,7 +88,7 @@ func (s *statics) toHTML() string {
 	code += "</tbody></table>\n<h3>SQLs</h3>\n<pre>"
 	for _, tb := range s.tables {
 		code += "<a name='detail_" + tb.table + "'></a>"
-		code += html.EscapeString(tb.alter.String()) + "\n\n"
+// 		code += html.EscapeString(tb.alter.String()) + "\n\n"
 	}
 	code += "</pre>\n\n"
 
