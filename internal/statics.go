@@ -85,12 +85,12 @@ func (s *statics) toHTML() string {
 		code += "<td>" + tb.timer.usedSecond() + "</td>\n"
 		code += "</tr>\n"
 	}
-// 	code += "</tbody></table>\n<h3>SQLs</h3>\n<pre>"
+	code += "</tbody></table>\n<h3>SQLs</h3>\n<pre>"
 // 	for _, tb := range s.tables {
 // 		code += "<a name='detail_" + tb.table + "'></a>"
 // 		code += html.EscapeString(tb.alter.String()) + "\n\n"
 // 	}
-// 	code += "</pre>\n\n"
+	code += "</pre>\n\n"
 
 	code += "<h3>详情</h3>\n"
 	code += `<table class='tb_1'>
