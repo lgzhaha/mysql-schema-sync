@@ -56,14 +56,8 @@ func (ta *TableAlterData) Split() []*TableAlterData {
 
 func (ta *TableAlterData) String() string {
 	relationTables := ta.SchemaDiff.RelationTables()
-	sqlTpl := `
--- Table : %s
--- Type : %s
--- RelationTables :%s
--- Comment :%s
--- SQL :
-%s
-`
+	sqlTpl := `{"Table": "%s", "Type": "%s", "RelationTables": "%s", "Comment": "%s", "SQL": "%s"}`
+
 	str := fmt.Sprintf(sqlTpl,
 		ta.Table,
 		ta.Type,
