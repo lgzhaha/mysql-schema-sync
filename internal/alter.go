@@ -63,7 +63,8 @@ func (ta *TableAlterData) String() string {
 		ta.Type,
 		strings.Join(relationTables, ","),
 		strings.TrimSpace(ta.Comment),
-		strings.Join(ta.SQL, "\n"),
+// 		strings.Join(ta.SQL, "\n"),
+		strings.Join(ta.SQL, ""),
 	)
 	return strings.TrimSpace(str)
 }
