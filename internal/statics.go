@@ -85,11 +85,11 @@ func (s *statics) toHTML() string {
 		code += "<td>" + tb.timer.usedSecond() + "</td>\n"
 		code += "</tr>\n"
 	}
-	code += "</tbody></table>\n<h3>SQLs</h3>\n<pre>"
-	for _, tb := range s.tables {
-		code += "<a name='detail_" + tb.table + "'></a>"
-		code += html.EscapeString(tb.alter.String()) + "\n\n"
-	}
+// 	code += "</tbody></table>\n<h3>SQLs</h3>\n<pre>"
+// 	for _, tb := range s.tables {
+// 		code += "<a name='detail_" + tb.table + "'></a>"
+// 		code += html.EscapeString(tb.alter.String()) + "\n\n"
+// 	}
 	code += "</pre>\n\n"
 
 	code += "<h3>详情</h3>\n"
@@ -106,6 +106,7 @@ func (s *statics) toHTML() string {
 	for idx, tb := range s.tables {
 
 		code += "<tr>"
+		code += "<a name='detail_" + tb.table + "'></a>"
 		code += "<th rowspan=2>" + strconv.Itoa(idx+1) + "</th>\n"
 		code += "<td rowspan=2>" + tb.table + "<br/><br/>"
 		if s.Config.Sync {
